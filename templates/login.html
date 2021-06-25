@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block title %}Logga in {% endblock %} {% block
+main %}
+
+<div class="container">
+  <div class="user-auth-container">
+    <h2 class="user-auth-h"><span class="highlighter">Logga in</span></h2>
+    <div class="form-control">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" autocomplete="off" />
+    </div>
+    <div class="form-control">
+      <label for="password">Lösenord</label>
+      <input type="password" name="password" id="password" />
+    </div>
+
+    <button type="submit" class="primary full-width">Logga in</button>
+    <p class="user-auth-sm">
+      Har du inget konto?
+      <a href="/register" class="user-auth-link">Registrera dig</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

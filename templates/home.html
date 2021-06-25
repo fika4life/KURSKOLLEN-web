@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block
+main%}
+
+<div id="home">
+  <h1 id="hero-text">
+    Läs och lämna <span class="highlighter">omdömen</span> om universitetskurser
+  </h1>
+  <div id="search-container">
+    <form id="search-form">
+      <div class="form-control">
+        <label for="search">Sök på en kurs eller program</label>
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Eg. Dietist"
+          autocomplete="off"
+        />
+      </div>
+      <button type="submit" class="primary">
+        <i class="fa fa-search"></i>Sök
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

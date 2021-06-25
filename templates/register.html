@@ -1,0 +1,29 @@
+{% extends 'layout.html' %} {% block title %}Registrera {% endblock %} {% block
+main %}
+
+<div class="container">
+  <form class="user-auth-container" id="registerForm">
+    <h2 class="user-auth-h"><span class="highlighter">Registrera</span></h2>
+    <div class="form-control">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" autocomplete="off" />
+      <small class="error-msg"></small>
+    </div>
+    <div class="form-control">
+      <label for="password">Lösenord</label>
+      <input type="password" name="password" id="password" />
+      <small class="error-msg"></small>
+    </div>
+    <div class="form-control">
+      <label for="password2">Bekräfta lösenord</label>
+      <input type="password" name="password2" id="password2" />
+      <small class="error-msg">test</small>
+    </div>
+    <button type="submit" class="primary full-width">Registrera</button>
+    <p class="user-auth-sm">
+      Har du redan ett konto?
+      <a href="/login" class="user-auth-link">Logga in</a>
+    </p>
+  </form>
+</div>
+{% endblock %}
