@@ -37,14 +37,17 @@ button.primary {
 }
 
 button.primary:hover {
-  height: 40px;
-  border: 3px solid #000;
-  padding-top: 6px;
-  padding-bottom: 11px;
+  transform: scale(1.05);
 }
 
 button.secondary {
+  border: 2px solid var(--yellow);
+  background-color: #fff;
 }
+
+button.secondary:hover {
+  transform: scale(1.05);
+  }
 
 .form-control label {
   display: block;
@@ -71,9 +74,14 @@ button.secondary {
     rgba(255, 255, 255, 0) 60%,
     var(--yellow) 60%
   );
-  width: 50%;
+
 }
 
+h2.highlighter{
+  margin-bottom: 40px;
+  width: max-content;
+
+}
 /* navbar styles */
 .nav-items {
   padding: 0 80px;
@@ -152,6 +160,12 @@ main.container {
   width: 100vw;
   background-color: var(--mediumgray);
   display: flex;
+}
+
+.content-container{
+  width: 1024px;
+  background-color: white;
+  padding: 40px;
 }
 
 /* Home styles*/
@@ -274,4 +288,43 @@ a.user-auth-link:visited {
 
 .user-auth-container .form-control.success input {
   border: 3px solid var(--green);
+}
+
+/* write review   */
+#write-review .form-control{
+  display: inline-block;
+  width: 100%;
+}
+
+.form-control#university{
+  width: 80%;
+  margin-right: 4%;
+  
+}
+
+.form-control#credits {  
+  width: 15%; 
+}
+
+.form-control#reviewTitle {  
+  width: 75%; 
+  margin-right: 4%;
+}
+
+.form-control#rating {  
+  width: 6%; 
+}
+#rating-slider {
+  width: 10%;
+}
+
+.form-control#reviewTf {
+  width: 100%;
+ 
+  
+}
+.form-control#reviewTf textarea{
+  border: 2px solid var(--green);
+  width: 100%;
+  border-radius: 4px;
 }

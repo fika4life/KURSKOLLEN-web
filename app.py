@@ -12,12 +12,15 @@ def register():
     if request.method == "GET":
         return render_template("register.html")
    
-
-
-@app.route('/login')
+@app.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "GET":
         return render_template("login.html")
+
+@app.route('/write-review', methods=["GET", "POST"])
+def writeReview():
+    if request.method == 'GET':
+        return render_template('writeReview.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
