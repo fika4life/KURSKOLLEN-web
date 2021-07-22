@@ -18,6 +18,8 @@
 
 body {
   font-family: "Nunito Sans", sans-serif;
+  height: 100vh;
+  background-color: var(--mediumgray);
 }
 
 /* global styles */
@@ -156,30 +158,35 @@ a.navbar-brand {
 }
 
 /* main styles*/
-main.container {
-  width: 100vw;
-  background-color: var(--mediumgray);
+.main-container {
+
   display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .content-container{
   width: 1024px;
   background-color: white;
   padding: 40px;
+  
 }
 
 /* Home styles*/
 #home {
   background-image: url("./images/desk.png");
-  height: 90vh;
   background-position: right -300px bottom;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 86px;
+  bottom: 0;
 }
 #hero-text {
   width: 20%;
@@ -188,36 +195,47 @@ main.container {
   display: block;
   top: 80px;
   left: 80px;
+  font-size: 38px;
 }
 
 #search-container {
   width: 40%;
   min-width: 400px;
-  height: 200px;
+  height: 160px;
   justify-self: center;
   align-self: center;
   background-color: var(--lightgray);
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  padding: 40px;
+
 }
 
 #search-form {
-  flex-grow: 1;
-  padding: 20px;
+  
+ 
   align-self: center;
+  
+  
+}
+
+
+
+#search-form .form-control label{
+  display: block;
 }
 
 #search-form .form-control input {
-  width: 78%;
+  width: 80%;
   float: left;
+
+
 }
 
-.form-control {
+.user-auth-container .form-control {
   position: relative;
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
+
 .form-control input:focus {
   outline: none;
 }
@@ -226,7 +244,6 @@ main.container {
 }
 #search-form > button {
   height: 40px;
-  display: inline-block;
   background-color: var(--yellow);
   padding: 9px;
   font-size: 18px;
@@ -235,20 +252,18 @@ main.container {
   border: none;
   cursor: pointer;
   margin-left: 4px;
+  width: 18%;
+  float: right;
 }
 
 /* register styles*/
-.container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 96vh;
-}
 .user-auth-container {
   width: 400px;
   background-color: var(--lightgray);
-  align-self: center;
+  margin: 100px auto;
   padding: 40px 25px;
+ 
+  
 }
 
 .user-auth-h {
@@ -312,10 +327,10 @@ a.user-auth-link:visited {
 }
 
 .form-control#rating {  
-  width: 6%; 
+  width: 5%; 
 }
 #rating-slider {
-  width: 10%;
+  width: 13%;
 }
 
 .form-control#reviewTf {
@@ -327,4 +342,32 @@ a.user-auth-link:visited {
   border: 2px solid var(--green);
   width: 100%;
   border-radius: 4px;
+}
+
+#rating-slider{
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid var(--green);
+  border-radius: 20px;
+
+}
+#rating-slider:focus{
+  outline: none;
+}
+
+#rating-slider::-webkit-slider-runnable-track, 
+#rating-slider::-moz-range-track{
+  background-color: var(--green);
+  height: 5px;
+
+}
+
+#rating-slider::-webkit-slider-thumb{
+     -webkit-appearance: none;
+     appearance: none;
+     background-color: var(--green);
+     height: 20px;
+     width: 20px;
+     border-radius: 50%;
+     cursor: pointer;
 }
