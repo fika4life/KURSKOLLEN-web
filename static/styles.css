@@ -159,17 +159,20 @@ a.navbar-brand {
 
 /* main styles*/
 .main-container {
-
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
 }
 
 .content-container{
   width: 1024px;
   background-color: white;
   padding: 40px;
+
+  margin-top: 60px;
+
+  
   
 }
 
@@ -230,11 +233,7 @@ a.navbar-brand {
 
 }
 
-.user-auth-container .form-control {
-  position: relative;
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-}
+
 
 .form-control input:focus {
   outline: none;
@@ -260,10 +259,17 @@ a.navbar-brand {
 .user-auth-container {
   width: 400px;
   background-color: var(--lightgray);
-  margin: 100px auto;
+  margin: 60px auto;
   padding: 40px 25px;
  
   
+}
+
+
+.user-auth-container .form-control {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .user-auth-h {
@@ -309,60 +315,68 @@ a.user-auth-link:visited {
 #write-review .form-control{
   display: inline-block;
   width: 100%;
+  padding-bottom: 20px;
 }
 
-.form-control#university{
+.form-control#university-group{
   width: 80%;
   margin-right: 4%;
   
 }
 
-.form-control#credits {  
+.form-control#credits-group {  
   width: 15%; 
 }
 
-.form-control#reviewTitle {  
+.form-control#reviewTitle-group {  
   width: 75%; 
   margin-right: 4%;
 }
 
-.form-control#rating {  
-  width: 5%; 
+.form-control#rating-group {  
+ width:7%
 }
+
 #rating-slider {
   width: 13%;
 }
 
-.form-control#reviewTf {
+.form-control#reviewTf-group{
   width: 100%;
  
   
 }
-.form-control#reviewTf textarea{
+.form-control#reviewTf-group textarea{
   border: 2px solid var(--green);
   width: 100%;
   border-radius: 4px;
 }
 
-#rating-slider{
+
+/* styling slider  */
+/* chrome adn safari */
+input[type='range']{
   -webkit-appearance: none;
   appearance: none;
   border: 2px solid var(--green);
   border-radius: 20px;
 
 }
-#rating-slider:focus{
+input[type='range']:focus{
   outline: none;
 }
 
-#rating-slider::-webkit-slider-runnable-track, 
-#rating-slider::-moz-range-track{
+input[type='range']::-webkit-slider-runnable-track{
+
   background-color: var(--green);
-  height: 5px;
+  height: 3px;
+  cursor: pointer;
+  border-radius: 4px;
+  
 
 }
 
-#rating-slider::-webkit-slider-thumb{
+input[type='range']::-webkit-slider-thumb{
      -webkit-appearance: none;
      appearance: none;
      background-color: var(--green);
@@ -370,4 +384,65 @@ a.user-auth-link:visited {
      width: 20px;
      border-radius: 50%;
      cursor: pointer;
+     margin-top: -7px;
+}
+
+input[type='range']::-webkit-slider-
+
+
+
+/* firefox */
+
+input[type='range']::-moz-range-track{
+
+  background-color: var(--green);
+  height: 3px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+
+}
+
+input[type='range']::-moz-range-thumb{
+     -webkit-appearance: none;
+     appearance: none;
+     background-color: var(--green);
+     height: 20px;
+     width: 20px;
+     border-radius: 50%;
+     cursor: pointer;
+     margin-top: -7px;
+}
+
+input[type='range']::-moz-range-track{
+
+  background-color: var(--green);
+  height: 3px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+
+}
+
+/* ie */
+
+input[type='range']::-ms-track{
+     -webkit-appearance: none;
+     appearance: none;
+     background-color: var(--green);
+     height: 20px;
+     width: 20px;
+     border-radius: 50%;
+     cursor: pointer;
+     margin-top: -7px;
+}
+
+input[type='range']::-ms-track{
+
+  background-color: var(--green);
+  height: 3px;
+  cursor: pointer;
+  border-radius: 4px;
+  
+
 }

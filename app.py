@@ -24,6 +24,12 @@ def writeReview():
     if request.method == 'GET':
         return render_template('writeReview.html')
 
+
+@app.route('/search-results', methods=["GET", "POST"])
+def searchResults():
+    if request.method =='GET':
+        return render_template('searchResults.html')
+
 if __name__ == '__main__':
     app.run(debug = True)
 

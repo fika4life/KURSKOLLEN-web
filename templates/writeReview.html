@@ -1,47 +1,52 @@
 {% extends 'layout.html' %} {% block title %}Registrera {% endblock %} {% block
 main %}
 
-<div class="container">
-  <div class="content-container">
-    <h2 class="highlighter">Skriv omdöme</h2>
-    <form action="" method="POST" id="write-review">
-      <div class="form-control" id="courseName">
-        <label for="courseName">Kursnamn</label>
-        <input type="text" id="courseName" name="courseName" />
-      </div>
-      <div class="form-control" id="university">
-        <label for="university">Universitet</label>
-        <input type="text" name="university" />
-      </div>
-      <div class="form-control" id="credits">
-        <label for="credits">Antal hp</label>
-        <input type="number" name="credits" />
-      </div>
-      <div class="form-control" id="reviewTitle">
-        <label for="reviewTitle">Rubrik</label>
-        <input type="text" id="reviewTitle" name="reviewTitle" />
-      </div>
-      <div class="form-control" id="rating">
-        <label for="rating">Omdöme</label>
-        <input type="number" min="1" max="5" name="rating" id="rating-input/>
-      </div>
+<div class="content-container">
+  <h2 class="highlighter">Skriv omdöme</h2>
+  <form action="" method="POST" id="write-review">
+    <div class="form-control" id="courseName-group">
+      <label for="courseName">Kursnamn</label>
+      <input type="text" id="courseName" name="courseName" />
+    </div>
+    <div class="form-control" id="university-group">
+      <label for="university">Universitet</label>
+      <input type="text" name="university" />
+    </div>
+    <div class="form-control" id="credits-group">
+      <label for="credits">Antal hp</label>
+      <input type="number" name="credits" />
+    </div>
+    <div class="form-control" id="reviewTitle-group">
+      <label for="reviewTitle">Rubrik</label>
+      <input type="text" id="reviewTitle" name="reviewTitle" />
+    </div>
+    <div class="form-control" id="rating-group">
+      <label for="rating">Omdöme</label>
       <input
-        type="range"
+        type="number"
         min="1"
         max="5"
-        step="1"
-        id="rating-slider"
-        name="ratingSlider"
+        value="3"
+        name="rating"
+        id="rating-input"
       />
+    </div>
+    <input
+      type="range"
+      min="1"
+      max="5"
+      step="1"
+      id="rating-slider"
+      name="ratingSlider"
+    />
 
-      <div class="form-control" id="reviewTf">
-        <label for="comments">Kommentar</label>
-        <textarea name="comments" rows="10"> </textarea>
-      </div>
-      <button class="secondary">Avbryta</button>
-      <button type="submit" class="primary">Publicera</button>
-    </form>
-  </div>
+    <div class="form-control" id="reviewTf-group">
+      <label for="comments">Kommentar</label>
+      <textarea name="comments" rows="10"> </textarea>
+    </div>
+    <button class="secondary">Avbryta</button>
+    <button type="submit" class="primary">Publicera</button>
+  </form>
 </div>
 
 {% endblock %}
