@@ -1,0 +1,138 @@
+{
+  "courses": [
+    {
+      "courseId": 1,
+      "courseName": "Kostvetenskap A: Nutrition",
+      "school": "Uppsala universitet",
+      "credits": 30,
+      "reviews": [
+        {
+          "rating": 4,
+          "title": "Best course ever",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.662Z"
+        },
+        {
+          "rating": 3,
+          "title": "ok",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.662Z"
+        },
+        {
+          "rating": 2,
+          "title": "bleh",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.662Z"
+        },
+        {
+          "rating": 5,
+          "title": "Kanonbra",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.662Z"
+        },
+        {
+          "rating": 1,
+          "title": "Nja",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        }
+      ]
+    },
+    {
+      "courseId": 2,
+      "courseName": "Dietetik A",
+      "school": "Umeå universitet",
+      "credits": 30,
+      "reviews": [
+        {
+          "rating": 5,
+          "title": "Best course ever",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 2,
+          "title": "ok",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 1,
+          "title": "bleh",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 5,
+          "title": "Kanonbra",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 1,
+          "title": "Nja",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        }
+      ]
+    },
+    {
+      "courseId": 3,
+      "courseName": "Kroppssammansättning och sjukdomstillstånd",
+      "school": "Karolinska institutet",
+      "credits": 7,
+      "reviews": [
+        {
+          "rating": 4,
+          "title": "bleh",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 1,
+          "title": "Nja",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        }
+      ]
+    },
+    {
+      "courseId": 4,
+      "courseName": "Dietistprogrammet",
+      "school": "Göteborgs universitet",
+      "credits": 240,
+      "reviews": [
+        {
+          "rating": 5,
+          "title": "Best course ever",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 2,
+          "title": "ok",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 1,
+          "title": "bleh",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 5,
+          "title": "Kanonbra",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        },
+        {
+          "rating": 1,
+          "title": "Nja",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
+          "timestamp": "2021-07-24T18:49:40.663Z"
+        }
+      ]
+    }
+  ]
+}

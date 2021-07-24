@@ -2,10 +2,11 @@
 :root {
   --green: #99ca95;
   --yellow: #f8ba1b;
-  --gray: #717171;
+  --darkgray: #717171;
   --orange: #f06a2b;
   --lightgray: #fcfcfc;
   --mediumgray: #f4f4f4;
+  --gray:#c4c4c4;
   --btn-f-s: 1.1em:
   --btn-brdr-rad: 4:
 }
@@ -59,14 +60,20 @@ button.secondary:hover {
 
 .form-control input {
   width: 100%;
-  border: 2.4px solid var(--green);
+  border: 1px solid var(--gray);
   border-radius: 4px;
   height: 40px;
   appearance: none;
   font-size: 18px;
   padding: 10px;
-  color: var(--gray);
+  color: var(--darkgray);
   font-family: "Nunito Sans", sans-serif;
+}
+
+.form-control input:focus{
+
+  outline-color: var(--yellow);
+  
 }
 
 
@@ -235,9 +242,7 @@ a.navbar-brand {
 
 
 
-.form-control input:focus {
-  outline: none;
-}
+
 .fa-search {
   margin: 0 3px;
 }
