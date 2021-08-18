@@ -5,15 +5,62 @@ main %}
   <section class="top-section">
     <div class="content-container">
       <div class="top-content-container">
-        <p>Tillbaka till sökresultat</p>
-        <h1 class="courseName">{{ data }}</h1>
+        <div class="schoolInfo">
+          <p class="sm-text">Tillbaka till sökresultat</p>
+          <h1 class="courseName">{{ data[0].courseName }}</h1>
+          <p class="school">{{ data[0].school }}</p>
+          <a href="/write-review">Skriv omdöme</a>
+        </div>
+        <div class="reviewInfo">
+          <h1 class="ratingBig">3.2</h1>
+          <p class="sm-text"></p>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="content-container">
     <section class="bottom-section">
-      <p>Visar 4 resultat för "dietist"< /p></p>
+      <h2 class="page-title highlighter">Omdömen</h2>
+      <div class="review">
+        <div class="rating-sm">{{ data[0].reviews[0].rating}}.0</div>
+        <div class="reviewText">
+          <h3>{{ data[0].reviews[0].title}}</h3>
+          <p>{{ data[0].reviews[0].timestamp}}</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ipsum beatae cum, laborum illum nisi quam? Debitis, asperiores. Quia
+            excepturi non earum labore! Labore molestiae suscipit dolore,
+            corporis fugiat maxime.
+          </p>
+        </div>
+      </div>
+      <div class="review">
+        <div class="rating-sm">2.0</div>
+        <div class="reviewText">
+          <h3>Sämst</h3>
+          <p>{{ data[0].reviews[0].timestamp}}</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ipsum beatae cum, laborum illum nisi quam? Debitis, asperiores. Quia
+            excepturi non earum labore! Labore molestiae suscipit dolore,
+            corporis fugiat maxime.
+          </p>
+        </div>
+      </div>
+      <div class="review">
+        <div class="rating-sm">{{ data[0].reviews[0].rating}}.0</div>
+        <div class="reviewText">
+          <h3>{{ data[0].reviews[0].title}}</h3>
+          <p>{{ data[0].reviews[0].timestamp}}</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            ipsum beatae cum, laborum illum nisi quam? Debitis, asperiores. Quia
+            excepturi non earum labore! Labore molestiae suscipit dolore,
+            corporis fugiat maxime.
+          </p>
+        </div>
+      </div>
     </section>
   </div>
 </div>
