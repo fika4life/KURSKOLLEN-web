@@ -5,16 +5,18 @@ main%}
   <h1 id="hero-text">
     Läs och lämna <span class="highlighter">omdömen</span> om universitetskurser
   </h1>
-  <div id="search-container">
-    <form id="search-form">
+  <div class="search-container">
+    <form class="search-form">
       <div class="form-control">
         <label for="search">Sök på en kurs eller program</label>
         <input
           type="search"
           name="search"
-          id="search"
+          class="search"
           placeholder="Eg. Dietist"
           autocomplete="off"
+          name="q"
+          value=""
         />
       </div>
       <button type="submit" class="primary">

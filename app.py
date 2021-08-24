@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 from flask_session import Session
 from tempfile import mkdtemp
 import requests
-from cs50 import SQL
+
 import sqlite3
 
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
@@ -37,11 +37,15 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-# Configure CS50 Library to use SQLite database
+# Configure SQLite database
 conn = sqlite3.connect('kurskollen.db')
-db = SQL("sqlite:///kurskollen.db")
-db.
+c = conn.cursor()
 
+
+
+conn.commit()
+
+conn.close()
 
 @app.route("/")
 def index():
@@ -94,7 +98,7 @@ def login():
         return render_template("login.html")
 
 @app.route('/write-review', methods=["GET", "POST"])
-@login_required
+# @login_required
 def writeReview():
     if request.method == 'GET':
         return render_template('writeReview.html')
@@ -103,7 +107,9 @@ def writeReview():
 @app.route('/search-results', methods=["GET", "POST"])
 def searchResults():
     if request.method == 'GET':
-        return render_template('searchResults.html')
+        data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
+        return render_template('searchResults.html', data = data.json())
+    
 
 
 @app.route('/course', methods = ['GET'])
@@ -111,6 +117,12 @@ def getCourse():
     if request.method == 'GET':
         data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
         return render_template('course.html', data = data.json())
+
+
+@app.route('/create-course', methods = ['GET'])
+def createCourse():
+    if request.method == 'GET':
+          return render_template('createCourse.html')
 
 
 if __name__ == '__main__':

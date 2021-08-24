@@ -2,3 +2,9 @@ CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, PRIM
 CREATE UNIQUE INDEX username ON users (username);
 
 
+
+#add users table
+# c.execute("""CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
+# """)
+# c.execute("""CREATE UNIQUE INDEX username ON users (username);
+# """)

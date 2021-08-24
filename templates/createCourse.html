@@ -1,0 +1,34 @@
+{% extends 'layout.html' %} {% block title %}Registrera {% endblock %} {% block
+main %}
+
+<div class="content-container">
+  <h2 class="highlighter">Lägg till kurs</h2>
+  <form action="" method="POST" id="write-review">
+    <div class="form-control" id="courseName-group">
+      <label for="courseName">Kursnamn</label>
+      <input
+        type="text"
+        id="courseName"
+        name="courseName"
+        placeholder="eg. Konstvetenskap"
+      />
+    </div>
+    <div class="form-control" id="university-group">
+      <label for="university">Universitet</label>
+      <input
+        type="text"
+        name="university"
+        placeholder="eg. Uppsala universitet"
+      />
+    </div>
+    <div class="form-control" id="credits-group">
+      <label for="credits">Antal hp</label>
+      <input type="number" name="credits" placeholder="eg. 30" />
+    </div>
+
+    <button class="secondary">Avbryta</button>
+    <button type="submit" class="primary">Publicera</button>
+  </form>
+</div>
+
+{% endblock %}

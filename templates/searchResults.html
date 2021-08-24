@@ -3,17 +3,58 @@ block main %}
 
 <div id="search-results">
   <section class="search-section">
-    <div class="content-container">
-      <div class="search-container"></div>
-      <div class="search-container"></div>
+    <div class="search-container">
+      <form class="search-form">
+        <div class="form-control">
+          <label for="search">Sök på en kurs eller program</label>
+          <input
+            type="search"
+            name="q"
+            value=""
+            class="search"
+            placeholder="Eg. Dietist"
+            autocomplete="off"
+          />
+        </div>
+        <button type="submit" class="primary">
+          <i class="fa fa-search"></i>Sök
+        </button>
+      </form>
     </div>
   </section>
+  <p>Visar 4 resultat för "dietist"</p>
 
-  <div class="content-container">
-    <section class="search-results">
-      <p>Visar 4 resultat för "dietist"</p>
-    </section>
+  <div class="title-container">
+    <h2 class="page-title highlighter">Kurser</h2>
+    <button class="secondary right-aligned">
+      <a href="/create-course"><span class="icon">+</span>Lägg till kurs</a>
+    </button>
   </div>
+  <section class="search-results">
+    <div class="course">
+      <div class="reviewInfo">
+        <h1 class="ratingBig">3.2</h1>
+        <small>3 omdömen</small>
+      </div>
+      <div class="course-info">
+        <h1 class="courseName">{{ data[0].courseName }}</h1>
+        <p class="school">{{ data[0].school }}, {{data[0].credits}}hp</p>
+        <button class="secondary"><a href="/course">Läs omdömen</a></button>
+      </div>
+    </div>
+
+    <div class="course">
+      <div class="reviewInfo">
+        <h1 class="ratingBig">3.4</h1>
+        <small>3 omdömen</small>
+      </div>
+      <div class="course-info">
+        <h1 class="courseName">{{ data[0].courseName }}</h1>
+        <p class="school">{{ data[0].school }}, {{data[0].credits}}hp</p>
+        <button class="secondary"><a href="/course">Läs omdömen</a></button>
+      </div>
+    </div>
+  </section>
 </div>
 
 {% endblock %}

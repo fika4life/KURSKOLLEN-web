@@ -1,0 +1,15 @@
+-finish html pages
+-add search as partial template
+
+
+-add ability to register and login users
+
+
+-create database with courses
+-make route to create courses
+
+
+-make reviews table
+-add ability to create reviews 
+
+-figure out how how to link courses to reviews
