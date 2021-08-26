@@ -25,9 +25,12 @@ main %}
       <label for="credits">Antal hp</label>
       <input type="number" name="credits" placeholder="eg. 30" />
     </div>
-
-    <button class="secondary">Avbryta</button>
-    <button type="submit" class="primary">Publicera</button>
+    <div class="button-container">
+      <button onclick="formPreventDefault()" class="secondary wide">
+        Back
+      </button>
+      <button type="submit" class="primary wide">Publicera</button>
+    </div>
   </form>
 </div>
 

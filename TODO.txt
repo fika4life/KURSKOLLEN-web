@@ -1,8 +1,7 @@
--finish html pages
--add search as partial template
 
 
--add ability to register and login users
+-add ability to register users
+-add ability to login users
 
 
 -create database with courses

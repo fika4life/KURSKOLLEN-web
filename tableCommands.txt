@@ -4,7 +4,18 @@ CREATE UNIQUE INDEX username ON users (username);
 
 
 #add users table
-# c.execute("""CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
+# c.execute("""CREATE TABLE users (id INTEGER, email TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
 # """)
-# c.execute("""CREATE UNIQUE INDEX username ON users (username);
+# c.execute("""CREATE UNIQUE INDEX username ON users (email);
 # """)
+
+
+
+conn = sqlite3.connect('kurskollen.db')
+c = conn.cursor()
+
+
+
+conn.commit()
+
+conn.close()

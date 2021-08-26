@@ -355,9 +355,14 @@ a.user-auth-link:visited {
   
 }
 .form-control#reviewTf-group textarea{
-  border: 2px solid var(--green);
+  border: 1px solid var(--gray);
   width: 100%;
   border-radius: 4px;
+}
+
+.form-control#reviewTf-group textarea:focus{
+ 
+  outline-color: var(--yellow);
 }
 
 
@@ -371,7 +376,7 @@ input[type='range']{
 
 }
 input[type='range']:focus{
-  outline: none;
+  outline: thin dotted;
 }
 
 input[type='range']::-webkit-slider-runnable-track{
@@ -453,6 +458,17 @@ input[type='range']::-ms-track{
   border-radius: 4px;
   
 
+}
+
+
+.button-container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+button.wide{
+  width: 300px;
 }
 
 /* search-results */

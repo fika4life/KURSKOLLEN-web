@@ -2,26 +2,7 @@
 block main %}
 
 <div id="search-results">
-  <section class="search-section">
-    <div class="search-container">
-      <form class="search-form">
-        <div class="form-control">
-          <label for="search">Sök på en kurs eller program</label>
-          <input
-            type="search"
-            name="q"
-            value=""
-            class="search"
-            placeholder="Eg. Dietist"
-            autocomplete="off"
-          />
-        </div>
-        <button type="submit" class="primary">
-          <i class="fa fa-search"></i>Sök
-        </button>
-      </form>
-    </div>
-  </section>
+  <section class="search-section">{% include 'search.html' %}</section>
   <p>Visar 4 resultat för "dietist"</p>
 
   <div class="title-container">

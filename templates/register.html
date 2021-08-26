@@ -22,7 +22,12 @@ main %}
     <div class="form-control">
       <label for="password2">Bekräfta lösenord</label>
       <input type="password" name="password2" id="password2" />
-      <small class="error-msg">test</small>
+      {% if msg %}
+      <small class="error-msg"
+        >Kontot finns redan.
+        <a href="/login">Logga in istället?</a>
+      </small>
+      {% endif %}
     </div>
     <button type="submit" class="primary full-width">Registrera</button>
     <p class="user-auth-sm">

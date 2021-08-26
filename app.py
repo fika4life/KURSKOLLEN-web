@@ -1,9 +1,11 @@
-from flask import Flask, request, render_template 
+from flask import Flask, request, render_template, session 
+from flask.helpers import url_for 
 from flask_session import Session
 from tempfile import mkdtemp
 import requests
-
+from cs50 import SQL
 import sqlite3
+#from requests.sessions import session
 
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -36,16 +38,8 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-
-# Configure SQLite database
-conn = sqlite3.connect('kurskollen.db')
-c = conn.cursor()
-
-
-
-conn.commit()
-
-conn.close()
+# Configure CS50 Library to use SQLite database
+db = SQL("sqlite:///kurskollen.db")
 
 @app.route("/")
 def index():
@@ -66,7 +60,7 @@ def register():
       # chekc dataabse to see if username already exists
         emails = db.execute("SELECT email FROM users WHERE email = ?", email)
         if emails:
-            return apology("username already exists", 400)
+            return redirect(url_for('register', msg = 'Account already exists.'))
 
         # if username doesn't exist AND passwords match, create new one.
         elif password != password2:
@@ -80,33 +74,55 @@ def register():
 
             # if successful creating send to login page
             if success:
-                print(success)
-                return redirect("/login")
+                print('succses register')
+                return redirect(url_for('login'))
             else:
                 return apology("something went wrong", 403)
 
-    #if get request
+    # if request.method is GET, show user registration form.
     else:
-        return render_template("register.html")
+        if request.args.get('msg'):
+            return render_template("register.html", msg=request.args.get('msg'))
+        return render_template('register.html')
    
 @app.route('/login', methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        # Ensure username was submitted
+        if not request.form.get("email"):
+            return render_template("login.html", msg='Email är obligatorisk')
 
+        # Ensure password was submitted
+        elif not request.form.get("password"):
+            return apology("must provide password", 403)
 
+        # Query database for username
+        rows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email"))
 
-    if request.method == "GET":
+        # Ensure username exists and password is correct
+        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+            return render_template("login.html", msg='Fel mejladdress eller lösenord')
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+
+        # Redirect user to home page
+        return redirect("/")
+    else:
         return render_template("login.html")
 
+
 @app.route('/write-review', methods=["GET", "POST"])
-# @login_required
+@login_required
 def writeReview():
     if request.method == 'GET':
-        return render_template('writeReview.html')
+         return render_template('writeReview.html')
 
 
 @app.route('/search-results', methods=["GET", "POST"])
 def searchResults():
     if request.method == 'GET':
+        # session['url'] = url_for('searchResults')
         data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
         return render_template('searchResults.html', data = data.json())
     
