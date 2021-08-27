@@ -11,6 +11,7 @@ main %}
         id="courseName"
         name="courseName"
         placeholder="eg. Konstvetenskap"
+        required
       />
     </div>
     <div class="form-control" id="university-group">
@@ -19,11 +20,19 @@ main %}
         type="text"
         name="university"
         placeholder="eg. Uppsala universitet"
+        required
       />
     </div>
     <div class="form-control" id="credits-group">
       <label for="credits">Antal hp</label>
-      <input type="number" name="credits" placeholder="eg. 30" />
+      <input
+        type="number"
+        min="0"
+        step=".5"
+        name="credits"
+        placeholder="eg. 30"
+        required
+      />
     </div>
     <div class="button-container">
       <button onclick="formPreventDefault()" class="secondary wide">

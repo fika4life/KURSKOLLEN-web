@@ -1,14 +1,14 @@
-
-
--add ability to register users
--add ability to login users
-
-
--create database with courses
--make route to create courses
+-figure out routing system of course with id
+-display course on courses page
+-make sure only possible to add course if logged in
 
 
 -make reviews table
 -add ability to create reviews 
 
 -figure out how how to link courses to reviews
+
+
+-make dyanmic navbar so changes when logged in 
+- make navbar sticky
+-error messages (flash?)

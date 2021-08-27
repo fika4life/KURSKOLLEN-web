@@ -4,18 +4,20 @@ CREATE UNIQUE INDEX username ON users (username);
 
 
 #add users table
-# c.execute("""CREATE TABLE users (id INTEGER, email TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
+"""CREATE TABLE users (id INTEGER, email TEXT NOT NULL, hash TEXT NOT NULL, PRIMARY KEY(id));
 # """)
-# c.execute("""CREATE UNIQUE INDEX username ON users (email);
+"""CREATE UNIQUE INDEX username ON users (email);
 # """)
 
 
 
-conn = sqlite3.connect('kurskollen.db')
-c = conn.cursor()
+
+########## creates table courses
+Create table courses (id INTEGER, name TEXT NOT NULL, university TEXT NOT NULL, credits DECIMAL(3,1) NOT NULL, created_by INTEGER, TIMESTAMP DATETIME DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (id), FOREIGN KEY (created_by) REFERENCES users(id))
 
 
+"INSERT INTO courses (name, university, credits, created_by) VALUES (?,?,?,?);", name, university, credits, session['user_id'])
 
-conn.commit()
 
-conn.close()
+ALTER TABLE courses
+ALTER COLUMN credits DECIMAL(3,1);
