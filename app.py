@@ -17,9 +17,6 @@ from helpers import login_required, apology
 
 app = Flask(__name__)
 
-# turn on debug mode
-app.debug = True
-
 #auto reload templates
 app.config['TEMPLATES_AND_RELOAD'] = True
 
@@ -36,6 +33,9 @@ def after_request(response):
 app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.config['ENV'] = 'development'
+app.config['DEBUG'] = True
+app.config['TESTING'] = True
 Session(app)
 
 # Configure CS50 Library to use SQLite database
@@ -135,14 +135,33 @@ def getCourse():
         return render_template('course.html', data = data.json())
 
 
-@app.route('/create-course', methods = ['GET'])
+@app.route('/create-course', methods = ['GET', 'POST'])
 def createCourse():
-    if request.method == 'GET':
+    if request.method == 'POST':
+        courseName = request.form.get('courseName')
+        university = request.form.get('university')
+        credits = request.form.get('credits')  
+
+        
+        
+        success = db.execute("INSERT INTO courses (name, university, credits, created_by) VALUES (?,?,?,?);", courseName, university, credits, session['user_id'])
+
+       
+
+        if success:
+            data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
+            return render_template('course.html', data = data.json())
+        else:
+          return render_template('createCourse.html', msg='Error')
+            
+        
+    else:
           return render_template('createCourse.html')
+    
 
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(debug=True)
 
 
 def errorhandler(e):
