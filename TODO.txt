@@ -1,7 +1,7 @@
 -figure out routing system of course with id
 -display course on courses page
 -make sure only possible to add course if logged in
-
+-fix css of course page
 
 -make reviews table
 -add ability to create reviews 

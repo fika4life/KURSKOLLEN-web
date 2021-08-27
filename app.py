@@ -128,11 +128,11 @@ def searchResults():
     
 
 
-@app.route('/course', methods = ['GET'])
-def getCourse():
+@app.route('/courses/<course>', methods = ['GET'])
+def getCourse(course):
     if request.method == 'GET':
         data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
-        return render_template('course.html', data = data.json())
+        return render_template('course.html')
 
 
 @app.route('/create-course', methods = ['GET', 'POST'])
@@ -149,8 +149,8 @@ def createCourse():
        
 
         if success:
-            data = requests.get('https://my-json-server.typicode.com/fika4life/KURSKOLLEN-web/courses')
-            return render_template('course.html', data = data.json())
+
+            return redirect(url_for('getCourse', course=courseName))
         else:
           return render_template('createCourse.html', msg='Error')
             

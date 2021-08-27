@@ -1,5 +1,5 @@
-{% extends 'layout.html' %} {% block title %}Registrera {% endblock %} {% block
-main %}
+{% extends 'layout.html' %} {% block title %}Lägg till kurs {% endblock %} {%
+block main %}
 
 <div class="content-container">
   <h2 class="highlighter">Lägg till kurs</h2>
@@ -12,6 +12,7 @@ main %}
         name="courseName"
         placeholder="eg. Konstvetenskap"
         required
+        autocomplete="off"
       />
     </div>
     <div class="form-control" id="university-group">
@@ -21,6 +22,7 @@ main %}
         name="university"
         placeholder="eg. Uppsala universitet"
         required
+        autocomplete="off"
       />
     </div>
     <div class="form-control" id="credits-group">
@@ -32,6 +34,7 @@ main %}
         name="credits"
         placeholder="eg. 30"
         required
+        autocomplete="off"
       />
     </div>
     <div class="button-container">
